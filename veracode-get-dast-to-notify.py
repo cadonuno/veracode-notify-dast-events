@@ -123,7 +123,7 @@ def build_scan_failed_email(failed_scan_occurrence):
         You can find more details in the Veracode Platform: https://web.analysiscenter.veracode.com/was/#/analysisoccurrence/{failed_scan_occurrence["analysis_occurrence_id"]}/scans"""
     }
 
-def send_email(occurrence):
+def send_notification(occurrence):
     #TODO: implement e-mail sending
     return None
 
@@ -143,7 +143,7 @@ def main():
 
     #write e-mails and set them as pairs of e-mail and text
     for occurrence in emails_to_end:
-        send_email(occurrence)
+        send_notification(occurrence)
 
 
 
