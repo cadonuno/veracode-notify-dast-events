@@ -12,6 +12,13 @@ The notifications are added to a list with 3 items:
 - subject: a simple subject explaining what the notification is about. Can be a message title or e-mail subject
 - body: the message to send, will contain a link to the scan in Veracode
 
-Implementation of the send_notification method is required as it depends on your environment
+An object containing 'to', 'subject', and 'body' will be present for the implementation of the send_notificationmethod. Its implementation depends on your SMTP server.
 
-## Don't forget to run pip install -r requirements.txt
+## Parameters
+
+- `--date_interval_days`: Number of days to look back when searching for scans. Defaults to 1 day.
+- `--scan_name_filter`: Optional filter to only process scans matching the specified name pattern.
+
+## Setup
+
+Run `pip install -r requirements.txt` to install dependencies.
